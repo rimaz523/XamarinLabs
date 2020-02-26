@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinLabs.Views;
 
 namespace XamarinLabs
 {
@@ -10,7 +11,7 @@ namespace XamarinLabs
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new GridLayoutView();
         }
 
         protected override void OnStart()
