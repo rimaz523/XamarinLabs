@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinLabs.Views.MoreControls">
+    <ContentPage.Content>
+        <StackLayout Padding="10,20,10,5">
+            <Label Text="{Binding Source={x:Reference CarPicker}, Path=SelectedItem}" />
+            <Picker x:Name="CarPicker" Title="Select a Car">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Audi</x:String>
+                        <x:String>BMW</x:String>
+                        <x:String>Subaru</x:String>
+                        <x:String>Lancer</x:String>
+                        <x:String>Lancer</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+             </Picker>
+            <Label Text="{Binding Source={x:Reference mSlider}, Path=Value, StringFormat='Value is {0:F2}'}"/>
+            <Slider x:Name="mSlider" Maximum="10" Minimum="0" Value="5"/>
+            <ListView ItemsSource="{Binding Cars}"></ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

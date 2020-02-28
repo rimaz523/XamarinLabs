@@ -11,7 +11,7 @@ namespace XamarinLabs
         {
             InitializeComponent();
 
-            MainPage = new GridLayoutView();
+            MainPage = new ListViewPage();
         }
 
         protected override void OnStart()
