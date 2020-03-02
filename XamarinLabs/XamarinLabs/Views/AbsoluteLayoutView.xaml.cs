@@ -14,6 +14,7 @@ namespace XamarinLabs.Views
     {
         public AbsoluteLayoutView()
         {
+            Title = "Absolute";
             InitializeComponent();
         }
     }

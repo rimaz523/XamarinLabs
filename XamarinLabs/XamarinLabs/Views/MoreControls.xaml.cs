@@ -11,6 +11,7 @@ namespace XamarinLabs.Views
         public List<String> Cars { get; set; }
         public MoreControls()
         {
+            Title = "Controls";
             InitializeComponent();
             Cars = new List<String>()
             {

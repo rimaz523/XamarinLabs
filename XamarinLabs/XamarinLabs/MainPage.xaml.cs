@@ -15,6 +15,7 @@ namespace XamarinLabs
     {
         public MainPage()
         {
+            Title = "Main";
             InitializeComponent();
         }
     }
