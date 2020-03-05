@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinLabs.Views.ObsListView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Name" Text="{Binding Name}"/>
+            <Frame HasShadow="False" BorderColor="Gray" Padding="5">
+                <Editor Text="{Binding Description}" Placeholder="Description" AutoSize="TextChanges" MaxLength="100"/>
+            </Frame>
+            <Button Text="Add Item" Command="{Binding AddItemCommand}" />
+            <BoxView HeightRequest="1" Color="Blue"/>
+            <ListView ItemsSource="{Binding Places}" HasUnevenRows="True" 
+                      IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}" RefreshCommand="{Binding RefreshItemsCommand}
+                ">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="5" BorderColor="Gray" CornerRadius="10">
+                                <StackLayout>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold"/>
+                                        <Label HorizontalOptions="StartAndExpand" Text="{Binding Special}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Delete"  IsDestructive="True" Clicked="DeleteItem" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
