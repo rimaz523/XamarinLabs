@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:rts="clr-namespace:XamarinLabs.Helpers"
+             mc:Ignorable="d"
+             x:Class="XamarinLabs.Views.TemplatedListView">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="ReportCompleteTemplate">
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding ReportName}"/>
+                        <Label Text="{Binding ReportDescription}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <DataTemplate x:Key="ReportIncompleteTemplate">
+                <ViewCell>
+                    <StackLayout BackgroundColor="Yellow">
+                        <Label Text="{Binding ReportName}"/>
+                        <Label Text="{Binding ReportDescription}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+            <rts:ReportTemplateSelector x:Key="ReportTemplateSlctr" CompletedTemplate="{StaticResource ReportCompleteTemplate}" IncompleteTemplate="{StaticResource ReportIncompleteTemplate}"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Reports}" ItemTemplate="{StaticResource ReportTemplateSlctr}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

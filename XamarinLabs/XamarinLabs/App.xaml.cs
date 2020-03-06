@@ -11,7 +11,7 @@ namespace XamarinLabs
         {
             InitializeComponent();
 
-            MainPage = new ObsListView();
+            MainPage = new TemplatedListView();
         }
 
         protected override void OnStart()
