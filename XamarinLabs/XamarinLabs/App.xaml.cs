@@ -11,7 +11,7 @@ namespace XamarinLabs
         {
             InitializeComponent();
 
-            MainPage = new TemplatedListView();
+            MainPage = new PersonEventCommandView();
         }
 
         protected override void OnStart()
