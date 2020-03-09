@@ -11,7 +11,7 @@ namespace XamarinLabs
         {
             InitializeComponent();
 
-            MainPage = new PersonEventCommandView();
+            MainPage = new HorizontalCollectionView();
         }
 
         protected override void OnStart()
