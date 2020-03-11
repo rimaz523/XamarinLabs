@@ -11,7 +11,7 @@ namespace XamarinLabs
         {
             InitializeComponent();
 
-            MainPage = new HorizontalCollectionView();
+            MainPage = new ImageView();
         }
 
         protected override void OnStart()
