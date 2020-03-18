@@ -57,6 +57,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CameraPreview.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\CameraViewRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
