@@ -11,7 +11,7 @@ namespace XamarinLabs
         {
             InitializeComponent();
 
-            MainPage = new CameraPage();
+            MainPage = new ReadFromFile();
         }
 
         protected override void OnStart()

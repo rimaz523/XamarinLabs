@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CameraPreview.cs" />
+    <Compile Include="Helpers\AndroidHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\CameraViewRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
